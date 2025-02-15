@@ -1,0 +1,19 @@
+@font-face {
+    font-family: pop lite;
+    src: url(../fonts/Poppins-Thin.ttf);
+  }
+
+@font-face {
+    font-family: pop reg;
+    src: url(../fonts/Poppins-Regular.ttf);
+  }
+
+@font-face {
+    font-family: pop med;
+    src: url(../fonts/Poppins-Medium.ttf);
+  }
+
+@font-face {
+    font-family: pop sem;
+    src: url(../fonts/Poppins-SemiBold.ttf);
+  }

@@ -1,0 +1,37 @@
+@import "tailwindcss";
+
+.heroBadge {
+  background: linear-gradient(
+    90deg,
+    rgba(142, 141, 141, 0.15) 0%,
+    rgba(40, 40, 40, 0.15) 100%
+  );
+}
+
+.heroText {
+  background: linear-gradient(180deg, #e2e8f8 0%, #858992 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
+
+.smButton {
+  background: linear-gradient(
+    90deg,
+    rgba(142, 141, 141, 0.15) 0%,
+    rgba(40, 40, 40, 0.15) 100%
+  );
+}
+
+.sideLineLeft {
+  border-image: linear-gradient(270deg, #0d111a 0%, #5c73ae 100%) 1;
+}
+
+.sideLineRight {
+  border-image: linear-gradient(270deg, #5c73ae 0%, #0d111a 100%) 1;
+}
+
+.catText {
+  background: linear-gradient(90deg, #7687B5 0%, #91B0FF 42%, #E2E8F8 100%);
+  -webkit-text-fill-color: transparent;
+  -webkit-background-clip: text;
+}
