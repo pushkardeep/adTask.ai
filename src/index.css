@@ -31,7 +31,7 @@
 }
 
 .catText {
-  background: linear-gradient(90deg, #7687B5 0%, #91B0FF 42%, #E2E8F8 100%);
+  background: linear-gradient(90deg, #7687b5 0%, #91b0ff 42%, #e2e8f8 100%);
   -webkit-text-fill-color: transparent;
   -webkit-background-clip: text;
 }

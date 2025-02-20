@@ -2,6 +2,7 @@ import React from "react";
 import NorButton from "./components/common/NorButton";
 import SliderElem from "./components/common/SliderElem";
 import WorkedWithElem from "./components/common/WorkedWithElem";
+import SmButton from "./components/common/SmButton";
 
 function App() {
   return (
@@ -149,15 +150,13 @@ function App() {
             alt={"amazon"}
           />
         </div>
-
-        {/* smButton  */}
-        <button className="smButton relative cursor-pointer block mx-auto px-3.5 py-1.5 text-white text-[12.5px] border border-[#FFFFFF0D] rounded-full mt-48 z-20">
-          Features
-        </button>
       </div>
 
       {/* page 3  */}
       <div className="relative w-full min-h-screen max-w-[1320px] mx-auto py-5 px-4">
+        {/* smButton  */}
+        <SmButton title={"Features"} styles={"mb-5"} />
+
         {/* headings  */}
         <div className="relative w-full flex justify-between items-center gap-5 z-20">
           <hr className="sideLineRight w-full rounded-full" />
@@ -173,11 +172,96 @@ function App() {
         </div>
 
         {/* smHeading */}
-        <h6 className="relative w-fit block mx-auto text-[#E2E8F8] text-[8.5px] font-[pop_reg] mt-7 z-20">
+        <h6 className="relative w-fit block mx-auto text-[#E2E8F8] text-[10px] font-[pop_reg] mt-6 z-20">
           Experience Intelligent Features to optimize your marketing efforts.
         </h6>
 
+        {/* blur light  */}
         <div className="absolute top-28 left-1/2 -translate-x-1/2 w-[350px] aspect-video bg-[#263048] rounded-full blur-2xl z-0"></div>
+
+        {/* features card  1*/}
+        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
+          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
+            {/* triangle  */}
+            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+            <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
+
+            {/* circle  */}
+            <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+              <div className="w-2 aspect-square relative">
+                <div className="w-full h-full bg-white rounded-full relative z-0"></div>
+                <img
+                  className="min-w-[100px] aspect-square absolute left-[-73px] top-[2px] z-20"
+                  src="/images/radar_circle.png"
+                  alt=""
+                />
+              </div>
+            </div>
+
+            {/* text  */}
+            <div className="w-full px-5 relative mt-10 z-10">
+              <h4 className="text-white font-[pop_reg] text-[10px]">
+                Reach Target Audience
+              </h4>
+              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                Pinpoint the perfect audience with precision. Our AI-driven
+                targeting ensures every message resonates where it matters most.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        {/* features card  2*/}
+        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
+          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
+            {/* triangle  */}
+            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+            <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
+
+            {/* circle  */}
+            <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+              <div className="w-[70%] border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+                <img
+                  className="h-[85%]"
+                  src="/images/electric.png"
+                  alt="electric"
+                />
+              </div>
+            </div>
+
+            {/* text  */}
+            <div className="w-full px-5 relative mt-10 z-10">
+              <h4 className="text-white font-[pop_reg] text-[10px]">
+                Intelligent Agents to Optimize your Reach
+              </h4>
+              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                Scale and refine your marketing with AI-powered agents. They
+                track performance in real-time to help you reach more customers
+                efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
+          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
+            {/* triangle  */}
+            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+
+
+            {/* text  */}
+            <div className="w-full px-5 relative mt-10 z-10">
+              <h4 className="text-white font-[pop_reg] text-[10px]">
+                Intelligent Agents to Optimize your Reach
+              </h4>
+              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                Scale and refine your marketing with AI-powered agents. They
+                track performance in real-time to help you reach more customers
+                efficiently.
+              </p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   );
