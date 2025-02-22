@@ -10,29 +10,44 @@ function App() {
       {/* page 1  */}
       <div className="w-full min-h-screen max-w-[1320px] mx-auto py-5 px-4">
         {/* nav  */}
-        <nav className="relative w-[70%] mx-auto flex justify-between items-center bg-[#5C60691A] border border-[#FFFFFF1A] rounded-[16px] py-2 px-5 backdrop-blur-md z-20">
-          <img className="w-[70px]" src="/images/adTask.png" alt="logo" />
+        <nav className="relative w-full md:w-[70%] mx-auto flex justify-between items-center bg-[#5C60691A] border border-[#FFFFFF1A] rounded-[16px] py-2 px-3 backdrop-blur-md z-20">
+          <img
+            className="w-[50px] md:w-[70px]"
+            src="/images/adTask.png"
+            alt="logo"
+          />
 
-          <div className="w-fit ml-24">
+          <div className="w-fit">
             {["Products", "Tools", "Contact us"].map((e, i) => (
               <span
                 key={i}
-                className="text-white ml-8 font-[pop_reg] text-[12px]"
+                className="text-white ml-2.5 sm:ml-8 font-[pop_reg] text-[10px] md:text-[12px]"
               >
                 {e}
               </span>
             ))}
           </div>
 
-          <div className="w-fit flex justify-center items-center gap-3">
-            <NorButton title={"Log in"} />
-            <NorButton title={"Schedule a Call"} styles={"bg-[#7687B54A]"} />
+          <div className="w-fit flex justify-center items-center gap-1.5 md:gap-3">
+            <NorButton title={"Log in"} styles={"px-4 md:px-6 py-2"} />
+            <div className="w-fit h-fit hidden md:block">
+              <NorButton
+                title={"Scedual a call"}
+                styles={"bg-[#7687B54A] px-6 py-2"}
+              />
+            </div>
+            <div className="w-fit h-it md:hidden">
+              <NorButton
+                img_src={"/images/call.png"}
+                styles={"bg-[#7687B54A] p-2"}
+              />
+            </div>
           </div>
         </nav>
 
         {/* triangle  */}
-        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[350px] border-l-transparent border-r-[350px] border-r-transparent border-b-[450px] border-b-[#263048] opacity-40 blur-3xl z-0"></div>
-        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[250px] border-l-transparent border-r-[250px] border-r-transparent border-b-[400px] border-b-[#263048] blur-xl z-10"></div>
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[300px] md:border-l-[350px] border-l-transparent border-r-[300px] md:border-r-[350px] border-r-transparent border-b-[450px] border-b-[#263048] opacity-40 blur-3xl z-0"></div>
+        <div class="absolute top-20 left-1/2 -translate-x-1/2 w-0 h-0 border-l-[200px] md:border-l-[250px] border-l-transparent border-r-[200px] md:border-r-[250px] border-r-transparent border-b-[400px] border-b-[#263048] blur-xl z-10"></div>
 
         {/* masked grid  */}
         <img
@@ -42,9 +57,9 @@ function App() {
         />
 
         {/* badge  */}
-        <div className="relative heroBadge w-fit h-fit flex justify-center items-center gap-2 mx-auto px-3.5 py-2.5 rounded-[16px] border border-[#FFFFFF0D] text-white text-[12.5px] font-[pop_reg] mt-14 z-20">
+        <div className="relative heroBadge w-fit h-fit flex justify-center items-center gap-2 mx-auto px-3.5 py-2.5 rounded-[16px] border border-[#FFFFFF0D] text-white text-[10px] md:text-[12.5px] font-[pop_reg] mt-14 z-20">
           <img
-            className="w-6 aspect-square object-center"
+            className="w-4 md:w-6 aspect-square object-center"
             src="/images/star.png"
             alt="star"
           />
@@ -53,12 +68,16 @@ function App() {
 
         {/* center text  */}
         <div className="relative w-fit h-fit mx-auto flex items-center justify-center mt-8 z-20">
-          <h1 className="heroText text-8xl font-[pop_reg]">ad</h1>
-          <h1 className="heroText text-8xl font-[pop_sem]">Task.ai</h1>
+          <h1 className="heroText text-6xl sm:text-7xl md:text-8xl font-[pop_reg]">
+            ad
+          </h1>
+          <h1 className="heroText text-6xl sm:text-7xl md:text-8xl font-[pop_sem]">
+            Task.ai
+          </h1>
         </div>
 
         {/* hero passage  */}
-        <p className="relative w-full mx-auto max-w-[600px] text-center text-white text-[12.5px] font-[pop_reg] mt-8 z-20">
+        <p className="relative w-full mx-auto max-w-[300px] md:max-w-[600px] text-center text-white/80 text-[8px] sm:text-[12.5px] font-[pop_reg] mt-8 z-20">
           Stop struggling with marketing decisions. Our AI assistant analyzes
           your business, creates personalized strategies, and helps you execute
           them - all in real-time.
@@ -177,88 +196,148 @@ function App() {
         </h6>
 
         {/* blur light  */}
-        <div className="absolute top-28 left-1/2 -translate-x-1/2 w-[350px] aspect-video bg-[#263048] rounded-full blur-2xl z-0"></div>
+        <div className="absolute top-34 left-1/2 -translate-x-1/2 w-[300px] aspect-video bg-[#263048] rounded-full blur-2xl z-0"></div>
 
-        {/* features card  1*/}
-        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
-          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
-            {/* triangle  */}
-            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
-            <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
+        <div className="w-fit mx-auto grid grid-cols-3 gap-5 mt-16">
+          {/* features card  1*/}
+          <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
+            <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
+              {/* triangle  */}
+              <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+              <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
 
-            {/* circle  */}
-            <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
-              <div className="w-2 aspect-square relative">
-                <div className="w-full h-full bg-white rounded-full relative z-0"></div>
-                <img
-                  className="min-w-[100px] aspect-square absolute left-[-73px] top-[2px] z-20"
-                  src="/images/radar_circle.png"
-                  alt=""
-                />
+              {/* circle  */}
+              <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+                <div className="w-2 aspect-square relative">
+                  <div className="w-full h-full bg-white rounded-full relative z-0"></div>
+                  <img
+                    className="min-w-[100px] aspect-square absolute left-[-73px] top-[2px] z-20"
+                    src="/images/radar_circle.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+
+              {/* text  */}
+              <div className="w-full px-5 relative mt-10 z-10">
+                <h4 className="text-white font-[pop_reg] text-[10px]">
+                  Reach Target Audience
+                </h4>
+                <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                  Pinpoint the perfect audience with precision. Our AI-driven
+                  targeting ensures every message resonates where it matters
+                  most.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="h-full flex flex-col gap-5">
+            {/* features card  3*/}
+            <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px]  h-[50%] p-[0.8px] rounded-xl relative overflow-hidden">
+              <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full flex flex-col justify-between items-center pb-4 pt-8 rounded-xl relative">
+                {/* triangle  */}
+                <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+
+                <div className="w-18 aspect-square rounded-lg bg-gradient-to-l from-[#7687B5] to-[#333B4F] mx-auto p-[0.8px]">
+                  <div className="relative w-full h-full rounded-lg bg-[#282d39] flex justify-center items-center">
+                    <div className="absolute w-[60%] aspect-square rounded-full bg-[#7687B5] blur-lg z-0"></div>
+                    <img
+                      className="w-[60%] aspect-square object-contain relative z-10"
+                      src="/images/gear.png"
+                      alt="b_gear"
+                    />
+                    <img
+                      className="w-[35%] aspect-square object-contain absolute right-1.5 bottom-1.5 z-10"
+                      src="/images/gear.png"
+                      alt="s_gear"
+                    />
+                  </div>
+                </div>
+
+                {/* text  */}
+                <div className="w-full px-5 relative z-10">
+                  <h4 className="text-white font-[pop_reg] text-[10px]">
+                    Marketing made Easier
+                  </h4>
+                  <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                    Save time and simplify campaign management. Let automated
+                    workflows handle the heavy lifting, so you can focus on
+                    creativity.
+                  </p>
+                </div>
               </div>
             </div>
 
-            {/* text  */}
-            <div className="w-full px-5 relative mt-10 z-10">
-              <h4 className="text-white font-[pop_reg] text-[10px]">
-                Reach Target Audience
-              </h4>
-              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
-                Pinpoint the perfect audience with precision. Our AI-driven
-                targeting ensures every message resonates where it matters most.
-              </p>
-            </div>
-          </div>
-        </div>
+            {/* features card  4*/}
+            <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] h-[50%] p-[0.8px] rounded-xl relative overflow-hidden">
+              <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full flex flex-col justify-between items-center pb-4 pt-8 rounded-xl relative">
+                {/* triangle  */}
+                <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
 
-        {/* features card  2*/}
-        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
-          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
-            {/* triangle  */}
-            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
-            <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
+                <div className="w-full flex justify-center items-center gap-1.5">
+                  <div className="w-18 aspect-square rounded-lg bg-gradient-to-l from-[#7687B5] to-[#333B4F] p-[0.8px] shadow-xl">
+                    <div className="relative w-full h-full rounded-lg bg-[#282d39] flex justify-center items-center">
+                      <div className="absolute w-[60%] aspect-square rounded-full bg-[#7687B5] blur-lg z-0"></div>
+                      <img
+                        className="w-[80%] aspect-square object-cover relative mt-2 z-10"
+                        src="/images/bars.png"
+                        alt="bars"
+                      />
+                    </div>
+                  </div>
 
-            {/* circle  */}
-            <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
-              <div className="w-[70%] border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
-                <img
-                  className="h-[85%]"
-                  src="/images/electric.png"
-                  alt="electric"
-                />
+                  <img
+                    className="w-[25%] aspect-square object-cover relative mt-2 z-10"
+                    src="/images/chart.png"
+                    alt="bars"
+                  />
+                </div>
+
+                {/* text  */}
+                <div className="w-full px-5 relative z-10">
+                  <h4 className="text-white font-[pop_reg] text-[10px]">
+                    Smart Marketing Insights
+                  </h4>
+                  <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                    Unlock actionable data to guide every decision. Stay ahead
+                    of trends, refine your strategies, and make confident moves
+                    with powerful analytics.
+                  </p>
+                </div>
               </div>
             </div>
-
-            {/* text  */}
-            <div className="w-full px-5 relative mt-10 z-10">
-              <h4 className="text-white font-[pop_reg] text-[10px]">
-                Intelligent Agents to Optimize your Reach
-              </h4>
-              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
-                Scale and refine your marketing with AI-powered agents. They
-                track performance in real-time to help you reach more customers
-                efficiently.
-              </p>
-            </div>
           </div>
-        </div>
 
-        <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
-          <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
-            {/* triangle  */}
-            <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+          {/* features card  2*/}
+          <div className="bg-gradient-to-l from-[#7687b5] to-[#333b4f] w-[260px] p-[0.8px] rounded-xl relative overflow-hidden">
+            <div className="bg-gradient-to-b from-[#0b0b0b] to-[#1d2333] w-full h-full pb-4 pt-10 rounded-xl relative">
+              {/* triangle  */}
+              <div class="absolute top-0 left-1/2 -translate-x-1/2  w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[270px] border-b-[#263048] blur-xl z-0"></div>
+              <div class="absolute top-[-20%] left-[-25%] -rotate-[20deg] w-0 h-0 border-l-[110px] border-l-transparent border-r-[110px] border-r-transparent border-b-[320px] border-b-[#263048] blur-xl opacity-50 z-0"></div>
 
+              {/* circle  */}
+              <div className="w-full border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+                <div className="w-[70%] border border-[#263048]/30 border-t-[#5C73AE]/30 aspect-square rounded-full relative flex justify-center items-center z-10">
+                  <img
+                    className="h-[85%]"
+                    src="/images/electric.png"
+                    alt="electric"
+                  />
+                </div>
+              </div>
 
-            {/* text  */}
-            <div className="w-full px-5 relative mt-10 z-10">
-              <h4 className="text-white font-[pop_reg] text-[10px]">
-                Intelligent Agents to Optimize your Reach
-              </h4>
-              <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
-                Scale and refine your marketing with AI-powered agents. They
-                track performance in real-time to help you reach more customers
-                efficiently.
-              </p>
+              {/* text  */}
+              <div className="w-full px-5 relative mt-10 z-10">
+                <h4 className="text-white font-[pop_reg] text-[10px]">
+                  Intelligent Agents to Optimize your Reach
+                </h4>
+                <p className="text-white/70 font-[pop_reg] text-[8.5px] mt-1 leading-3">
+                  Scale and refine your marketing with AI-powered agents. They
+                  track performance in real-time to help you reach more
+                  customers efficiently.
+                </p>
+              </div>
             </div>
           </div>
         </div>
